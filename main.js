@@ -31,9 +31,9 @@ function templateList(filelist) {
 }
 
 var app = http.createServer(function(request,response){
-  var _url = request.url;
-  var queryData = url.parse(_url, true).query;
-  var pathname = url.parse(_url, true).pathname;
+  var __url = request.url;
+  var queryData = url.parse(__url, true).query;
+  var pathname = url.parse(__url, true).pathname;
 
   if(pathname === '/') {
     if(queryData.id === undefined) {
